@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Assets/SOFT154.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
