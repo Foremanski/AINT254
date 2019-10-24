@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     float rotSpeedStart = 0;
     float rotSpeed = 2000;
