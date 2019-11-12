@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     float rotSpeedStart = 0;
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float moveSpeedStart = 0;
     float moveSpeed = 10f;
     Rigidbody myRigidbody;
+    ParticleSystem particleSystemRight;
 
     Vector3 originalPos;
 
@@ -26,13 +28,12 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey("left"))
         {
             myRigidbody.AddTorque(new Vector3(0, -1, 0) * rotSpeed);
-
+            
         }
      
         else if (Input.GetKey("right"))
         {
             myRigidbody.AddTorque(new Vector3(0, 1, 0) * rotSpeed);
-            
         }
 
         else if (Input.GetKey("up"))
