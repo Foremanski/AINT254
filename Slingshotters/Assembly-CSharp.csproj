@@ -62,12 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GravityController.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\MovmentScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerDestroy.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\StartNewScene.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/dforeman/Documents/GitHub/SOFT254/Slingshotters/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
