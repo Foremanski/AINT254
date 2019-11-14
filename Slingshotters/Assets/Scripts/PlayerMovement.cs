@@ -27,8 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey("left"))
         {
-            myRigidbody.AddTorque(new Vector3(0, -1, 0) * rotSpeed);
-            
+            myRigidbody.AddTorque(new Vector3(0, -1, 0) * rotSpeed);           
         }
      
         else if (Input.GetKey("right"))
@@ -39,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey("up"))
         {
             myRigidbody.AddRelativeForce(new Vector3(1, 0, 0) * moveSpeed);
-           
+          
         }
 
         else if (Input.GetKey("space") == true)
