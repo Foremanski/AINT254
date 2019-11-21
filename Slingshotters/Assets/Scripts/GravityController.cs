@@ -22,7 +22,7 @@ public class GravityController : MonoBehaviour
 
                         if (Rigidbodies[x].velocity.magnitude > 100)
                         {
-                            Debug.Log("YOURE GOIN TOO FAST!!!!");
+                            
                         }
 
                         // if(Rigidbodies[x])

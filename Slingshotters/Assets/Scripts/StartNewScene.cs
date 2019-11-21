@@ -7,7 +7,15 @@ public class StartNewScene : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SOFT254");
+        SceneManager.LoadScene("GameScene");
     }
-          
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("GameMenu");
+        }
+    }
+
 }

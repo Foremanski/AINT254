@@ -5,19 +5,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float rotSpeedStart = 0;
-    float rotSpeed = 3;
-    float moveSpeedStart = 0;
-    float moveSpeed = 10f;
+    public float rotSpeed = 3;
+    public float moveSpeed = 10f;
     Rigidbody myRigidbody;
     ParticleSystem particleSystemRight;
 
-    Vector3 originalPos;
-
-
     void Start()
     {
-        originalPos = gameObject.transform.position;
         myRigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
@@ -25,26 +19,20 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {       
 
-        if(Input.GetKey("left"))
+        if(Input.GetKey("a"))
         {
             myRigidbody.AddTorque(new Vector3(0, -1, 0) * rotSpeed);           
         }
      
-        else if (Input.GetKey("right"))
+        else if (Input.GetKey("d"))
         {
             myRigidbody.AddTorque(new Vector3(0, 1, 0) * rotSpeed);
         }
 
-        else if (Input.GetKey("up"))
+        else if (Input.GetKey("w"))
         {
             myRigidbody.AddRelativeForce(new Vector3(1, 0, 0) * moveSpeed);
           
-        }
-
-        else if (Input.GetKey("space") == true)
-        {
-            gameObject.transform.position = originalPos;
-            myRigidbody.velocity = new Vector3(0, 0, 0);
         }
     }
 }
