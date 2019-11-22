@@ -10,6 +10,11 @@ public class StartNewScene : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
