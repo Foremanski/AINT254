@@ -64,13 +64,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EscMenu.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-    <Compile Include="Assets\Scripts\FuelController.cs" />
-    <Compile Include="Assets\Scripts\GravityController.cs" />
-    <Compile Include="Assets\Scripts\MovementScript.cs" />
-    <Compile Include="Assets\Scripts\MovmentScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PlayerDestroy.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\onGoalPass.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\FuelController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\GravityController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\MovementScript.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\MovmentScript.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerDestroy.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\StartNewScene.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/dforeman/Documents/GitHub/AINT254/Slingshotters/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
