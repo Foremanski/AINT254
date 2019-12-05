@@ -4,10 +4,36 @@ using UnityEngine;
 
 public class GravityController : MonoBehaviour
 {
-    void OnTriggerStay(Collider collider)
+    public GameObject Player;
+    public GameObject Planet;
+
+    //planet's gravity field
+    public float maxDistance;
+    
+
+    void Update()
     {
-            //creates an array of rigidbodies to apply gravity to
-            Rigidbody[] Rigidbodies = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
+        float Distance = Vector3.Distance(Player.transform.position, Planet.transform.position);
+
+        Rigidbody playerRigidbody = Player.GetComponent<Rigidbody>();
+        Rigidbody planetRigidbody = Planet.GetComponent<Rigidbody>();
+
+        //gravitional constant
+        float G = 6.674f;
+        //newtons gravitional formula 
+        float gravityFormula = (G * ((playerRigidbody.mass * planetRigidbody.mass) / (Distance * Distance)));
+
+        //if the distance between player and planet is under the planet's gravity field
+        if (Distance < maxDistance)
+        {
+            playerRigidbody.AddForce((Planet.transform.position - Player.transform.position).normalized * gravityFormula);
+        }
+
+        //working code below
+        //--------------------------------------------------------------------
+        /*
+        //creates an array of rigidbodies to apply gravity to
+        Rigidbody[] Rigidbodies = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
 
             for (int x = 0; x < Rigidbodies.Length; x++)
             {
@@ -25,6 +51,11 @@ public class GravityController : MonoBehaviour
                             
                         }
 
+
+
+                        
+
+
                         // if(Rigidbodies[x])
                         //  {
                         //     Rigidbodies[x].AddForce(Rigidbodies[x].velocity * 3);
@@ -36,6 +67,6 @@ public class GravityController : MonoBehaviour
                     //checks to see if the rigidbody is close to the planet 
 
                 }
-            }      
+            }  */    
     }
 }

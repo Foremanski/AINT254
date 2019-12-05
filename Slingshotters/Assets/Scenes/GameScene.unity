@@ -460,6 +460,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352666700}
   m_CullTransparentMesh: 0
+--- !u!1 &381755914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686008153926262284, guid: 22a1e543c68b14d4cbce53f668112066,
+    type: 3}
+  m_PrefabInstance: {fileID: 5686008152886610551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &392185402
 GameObject:
   m_ObjectHideFlags: 0
@@ -11014,7 +11020,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459927748}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000029802322}
-  m_LocalPosition: {x: 27.73, y: 5, z: -0.49}
+  m_LocalPosition: {x: 42.4, y: 5, z: -0.5}
   m_LocalScale: {x: 1.6, y: 0.50000024, z: 0.6000001}
   m_Children:
   - {fileID: 955378072}
@@ -11124,6 +11130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da09498be80655c44bc6457aa50619da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1459927748}
+  Planet: {fileID: 381755914}
+  maxDistance: 100
 --- !u!114 &1459927756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12194,7 +12203,13 @@ PrefabInstance:
     - target: {fileID: 5686008153926262283, guid: 22a1e543c68b14d4cbce53f668112066,
         type: 3}
       propertyPath: m_Mass
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5686008153926262517, guid: 22a1e543c68b14d4cbce53f668112066,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5686008153926262517, guid: 22a1e543c68b14d4cbce53f668112066, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 22a1e543c68b14d4cbce53f668112066, type: 3}
