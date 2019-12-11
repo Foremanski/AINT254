@@ -12,7 +12,7 @@ public class PlayerDestroy : MonoBehaviour
         originalPos = gameObject.transform.position;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider Planet)
     {
         if(gameObject.tag == "Planet")
         {
