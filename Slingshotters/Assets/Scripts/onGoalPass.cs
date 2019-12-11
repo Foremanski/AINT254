@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class onGoalPass : MonoBehaviour
 {
     public GameObject Player;
+    public string nextLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,6 @@ public class onGoalPass : MonoBehaviour
     }
     private void OnTriggerEnter(Collider Player)
     {
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene(nextLevel);
     }
 }

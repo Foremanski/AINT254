@@ -5,31 +5,39 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject Planet;
 
     //planet's gravity field
     public float maxDistance;
-    
+    GameObject[] Planet;
+
+    void Start()
+    {
+         Planet = GameObject.FindGameObjectsWithTag("Planet");
+    }
 
     void Update()
     {
-        float Distance = Vector3.Distance(Player.transform.position, Planet.transform.position);
-
-        Rigidbody playerRigidbody = Player.GetComponent<Rigidbody>();
-        Rigidbody planetRigidbody = Planet.GetComponent<Rigidbody>();
-
-        //gravitional constant
-        float G = 6.674f;
-        //newtons gravitional formula 
-        float gravityFormula = (G * ((playerRigidbody.mass * planetRigidbody.mass) / (Distance * Distance)));
-
-        //if the distance between player and planet is under the planet's gravity field
-        if (Distance < maxDistance)
+        for(int i = 0; i < Planet.Length; i++)
         {
-            playerRigidbody.AddForce((Planet.transform.position - Player.transform.position).normalized * gravityFormula);
-        }
+            float Distance = Vector3.Distance(Player.transform.position, Planet[i].transform.position);
 
-        //working code below
+            Rigidbody playerRigidbody = Player.GetComponent<Rigidbody>();
+            Rigidbody planetRigidbody = FindObjectOfType<Rigidbody>(); //Planet.GetComponent<Rigidbody>();
+
+            //gravitional constant
+            float G = 6.674f;
+            //newtons gravitional formula 
+            float gravityFormula = (G * ((playerRigidbody.mass * planetRigidbody.mass) / (Distance * Distance)));
+
+            //if the distance between player and planet is under the planet's gravity field
+            if (Distance < maxDistance)
+            {
+                playerRigidbody.AddForce((Planet[i].transform.position - Player.transform.position).normalized * gravityFormula);
+            }
+        }
+      
+        //-------------------------------------------------------------------
+        //Old Code Below
         //--------------------------------------------------------------------
         /*
         //creates an array of rigidbodies to apply gravity to
@@ -50,11 +58,6 @@ public class GravityController : MonoBehaviour
                         {
                             
                         }
-
-
-
-                        
-
 
                         // if(Rigidbodies[x])
                         //  {

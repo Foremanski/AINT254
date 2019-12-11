@@ -14,8 +14,9 @@ public class PlayerDestroy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(gameObject.tag == "Hazard")
+        if(gameObject.tag == "Planet")
         {
+            Debug.Log("Oh No!");
             gameObject.transform.position = originalPos;
             
         }
