@@ -1,4 +1,4 @@
-<Root FileVersion="6.000000" Transpose="0" SaveVersion="41" RestoreUIPage="0" RestoreInstrumentIndex="1">
+<Root FileVersion="6.000000" Transpose="0" SaveVersion="40" RestoreUIPage="0" RestoreInstrumentIndex="2">
    <TrackMap Instr0="15" Instr1="0" Instr2="1" Instr3="2" Instr4="3" Instr5="4" Instr6="5" Instr7="6" Instr8="7" Instr9="8" Instr10="9" Instr11="10" Instr12="11" Instr13="12" Instr14="13" Instr15="14"/>
    <Instruments>
       <Instr Type="Mixer" Index="0" MIDIInTranspose="0" InChan="0" InsertFX="0">
@@ -179,52 +179,52 @@ uB6FPWZmZj4BAAAAAAAAAA==
             </Channel02>
          </MixerChannels>
          <AM Mute="0">
-            <Pad0 Nam="BD.wav" Vol="1.000000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="16383" Dir="Forward" Trg="Trigger">
+            <Pad0 Nam="/User/Projects/Demos/MenuTheme.prj/BD.wav" Vol="1.000000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="16383" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad0>
-            <Pad1 Nam="Snare.wav" Vol="0.510000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="27411" Dir="Forward" Trg="Trigger">
+            <Pad1 Nam="/User/Projects/Demos/MenuTheme.prj/Snare.wav" Vol="0.510000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="27411" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad1>
-            <Pad2 Nam="HH-CL.wav" Vol="0.555000" Pan="0.490000" Tps="0" Pit="0" Bus="0" Grp="1" Sta="0" End="17696" Dir="Forward" Trg="Trigger">
+            <Pad2 Nam="/User/Projects/Demos/MenuTheme.prj/HH-CL.wav" Vol="0.555000" Pan="0.490000" Tps="0" Pit="0" Bus="0" Grp="1" Sta="0" End="17696" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad2>
-            <Pad3 Nam="HH-OP.wav" Vol="0.500000" Pan="0.410000" Tps="0" Pit="0" Bus="0" Grp="1" Sta="0" End="43775" Dir="Forward" Trg="Trigger">
+            <Pad3 Nam="/User/Projects/Demos/MenuTheme.prj/HH-OP.wav" Vol="0.500000" Pan="0.410000" Tps="0" Pit="0" Bus="0" Grp="1" Sta="0" End="43775" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad3>
-            <Pad4 Nam="TomHi.wav" Vol="0.515000" Pan="0.350000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="45695" Dir="Forward" Trg="Trigger">
+            <Pad4 Nam="/User/Projects/Demos/MenuTheme.prj/TomHi.wav" Vol="0.515000" Pan="0.350000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="45695" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad4>
-            <Pad5 Nam="TomMid.wav" Vol="0.500000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="86015" Dir="Forward" Trg="Trigger">
+            <Pad5 Nam="/User/Projects/Demos/MenuTheme.prj/TomMid.wav" Vol="0.500000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="86015" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad5>
-            <Pad6 Nam="TomLo.wav" Vol="0.500000" Pan="0.630000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="41087" Dir="Forward" Trg="Trigger">
+            <Pad6 Nam="/User/Projects/Demos/MenuTheme.prj/TomLo.wav" Vol="0.500000" Pan="0.630000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="41087" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad6>
-            <Pad7 Nam="Rim.wav" Vol="0.380000" Pan="0.395000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="18335" Dir="Forward" Trg="Trigger">
+            <Pad7 Nam="/User/Projects/Demos/MenuTheme.prj/Rim.wav" Vol="0.380000" Pan="0.395000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="18335" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad7>
-            <Pad8 Nam="Ride1.wav" Vol="0.320000" Pan="0.315000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="120575" Dir="Forward" Trg="Trigger">
+            <Pad8 Nam="/User/Projects/Demos/MenuTheme.prj/Ride1.wav" Vol="0.320000" Pan="0.315000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="120575" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad8>
-            <Pad9 Nam="Ride2.wav" Vol="0.380000" Pan="0.675000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="128767" Dir="Forward" Trg="Trigger">
+            <Pad9 Nam="/User/Projects/Demos/MenuTheme.prj/Ride2.wav" Vol="0.380000" Pan="0.675000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="128767" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad9>
-            <Pad10 Nam="Crash1.wav" Vol="0.455000" Pan="0.330000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="134399" Dir="Forward" Trg="Trigger">
+            <Pad10 Nam="/User/Projects/Demos/MenuTheme.prj/Crash1.wav" Vol="0.455000" Pan="0.330000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="134399" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad10>
-            <Pad11 Nam="Crash2.wav" Vol="0.380000" Pan="0.675000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="162431" Dir="Forward" Trg="Trigger">
+            <Pad11 Nam="/User/Projects/Demos/MenuTheme.prj/Crash2.wav" Vol="0.380000" Pan="0.675000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="162431" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad11>
-            <Pad12 Nam="Sticks.wav" Vol="0.710000" Pan="0.500000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="11807" Dir="Forward" Trg="Trigger">
+            <Pad12 Nam="/User/Projects/Demos/MenuTheme.prj/Sticks.wav" Vol="0.710000" Pan="0.500000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="11807" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad12>
-            <Pad13 Nam="Perc1.wav" Vol="0.500000" Pan="0.345000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="12991" Dir="Forward" Trg="Trigger">
+            <Pad13 Nam="/User/Projects/Demos/MenuTheme.prj/Perc1.wav" Vol="0.500000" Pan="0.345000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="12991" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad13>
             <Pad14 Nam="" Vol="0.500000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="0" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad14>
-            <Pad15 Nam="KP jizz breaks 4.wav" Vol="1.000000" Pan="0.500000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="169343" Dir="Forward" Trg="Trigger">
+            <Pad15 Nam="/User/Projects/Demos/MenuTheme.prj/KP jizz breaks 4.wav" Vol="1.000000" Pan="0.500000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="169343" Dir="Forward" Trg="Trigger">
                <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
             </Pad15>
             <Out0 Rev="0.000000" Del="0.000000" Enable="0" Type="LP" Cutoff="0.000000" Q="0.000000"/>
