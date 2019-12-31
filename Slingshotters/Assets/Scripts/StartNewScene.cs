@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartNewScene : MonoBehaviour
 {
+
+    public string sceneName;
+
     public void StartGame()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(sceneName);
     }
 
     public void ExitGame()

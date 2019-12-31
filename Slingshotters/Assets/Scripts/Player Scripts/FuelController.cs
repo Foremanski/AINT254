@@ -56,18 +56,26 @@ public class FuelController : MonoBehaviour
             gameObject.GetComponent<PlayerMovement>().enabled = true;
         }
 
-        
+
 
         //debug section 
-        //====================
+        /*=======================
         if (Input.GetKey("space"))
         {
             gameObject.transform.position = originalPos;
             myRigidbody.velocity = new Vector3(0, 0, 0);
             FuelRemaining = maximumFuel;
             FuelBar.value = FuelRemaining;
-        }
-        //====================
+        } 
+        ======================= */
+    }
+
+    public void ResetLevel()
+    {
+        gameObject.transform.position = originalPos;
+        myRigidbody.velocity = new Vector3(0, 0, 0);
+        FuelRemaining = maximumFuel;
+        FuelBar.value = FuelRemaining;
 
         
     }
