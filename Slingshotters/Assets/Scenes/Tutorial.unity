@@ -3864,6 +3864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2964130775281953592, guid: 792d2dff5ef13ad4e893abe68fc9eb30,
+        type: 3}
+      propertyPath: FuelBar
+      value: 
+      objectReference: {fileID: 1558518143}
     - target: {fileID: 2964130775281953585, guid: 792d2dff5ef13ad4e893abe68fc9eb30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3919,11 +3924,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2964130775281953592, guid: 792d2dff5ef13ad4e893abe68fc9eb30,
-        type: 3}
-      propertyPath: FuelBar
-      value: 
-      objectReference: {fileID: 1558518143}
     - target: {fileID: 2964130775281953597, guid: 792d2dff5ef13ad4e893abe68fc9eb30,
         type: 3}
       propertyPath: m_Constraints
