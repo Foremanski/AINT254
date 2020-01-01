@@ -2412,6 +2412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 344360982}
   BlurBackground: {fileID: 1198677953}
+  Audio: {fileID: 1540661660}
 --- !u!114 &1459927754 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2964130775281953592, guid: 792d2dff5ef13ad4e893abe68fc9eb30,
@@ -2494,7 +2495,7 @@ PrefabInstance:
     - target: {fileID: 6896071950668449294, guid: 22a1e543c68b14d4cbce53f668112066,
         type: 3}
       propertyPath: m_Mass
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22a1e543c68b14d4cbce53f668112066, type: 3}
@@ -2606,7 +2607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1540661661
 AudioSource:
   m_ObjectHideFlags: 0
