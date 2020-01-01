@@ -8,6 +8,7 @@ public class EscMenu : MonoBehaviour
     bool isPaused;
     public GameObject PauseMenu;
     public GameObject BlurBackground;
+    public GameObject Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,9 @@ public class EscMenu : MonoBehaviour
             gameObject.GetComponent<GravityController>().enabled = false;
             PauseMenu.SetActive(true);
             BlurBackground.SetActive(true);
+
+            Audio.GetComponent<AudioSource>().pitch = 0.9f;
+            Audio.GetComponent<AudioSource>().volume = 0.5f;
         }
 
         else
@@ -52,6 +56,8 @@ public class EscMenu : MonoBehaviour
             PauseMenu.SetActive(false);
             BlurBackground.SetActive(false);
 
+            Audio.GetComponent<AudioSource>().pitch = 1;
+            Audio.GetComponent<AudioSource>().volume = 1;
         }
 
         
