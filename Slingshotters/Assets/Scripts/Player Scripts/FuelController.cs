@@ -7,7 +7,7 @@ public class FuelController : MonoBehaviour
 {
     public Slider FuelBar;
     private float FuelRemaining;
-    public float maximumFuel = 1000;
+    public float maximumFuel = 500;
     public float fuelRegen;
 
     public GameObject GameOver;
@@ -78,6 +78,7 @@ public class FuelController : MonoBehaviour
         myRigidbody.velocity = new Vector3(0, 0, 0);
         FuelRemaining = maximumFuel;
         FuelBar.value = FuelRemaining;
+        gameObject.GetComponent<GravityController>().enabled = true;
     }
 }
  

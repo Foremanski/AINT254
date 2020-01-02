@@ -13181,10 +13181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70384e6615b895746b11aa9600e6ffe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 344360982}
-  BlurBackground: {fileID: 1198677953}
+  PauseMenu: {fileID: 1984447826}
   Audio: {fileID: 1540661660}
-  GameOver: {fileID: 830937442}
 --- !u!65 &1459927750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13252,7 +13250,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459927748}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 1.5
   m_UseGravity: 1
