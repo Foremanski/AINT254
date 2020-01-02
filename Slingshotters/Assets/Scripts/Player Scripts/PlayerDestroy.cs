@@ -6,19 +6,15 @@ using UnityEngine.SceneManagement;
 public class PlayerDestroy : MonoBehaviour
 {
     Vector3 originalPos;
+    public GameObject Player;
 
     void Start()
     {
-        originalPos = gameObject.transform.position;
+        originalPos = Player.transform.position;
     }
 
-    void OnTriggerEnter(Collider Planet)
+    void OnTriggerEnter(Collider Player)
     {
-        if(gameObject.tag == "Planet")
-        {
-            Debug.Log("Oh No!");
-            gameObject.transform.position = originalPos;
-            
-        }
+        Player.transform.position = originalPos;
     }
 }
