@@ -4929,7 +4929,6 @@ GameObject:
   - component: {fileID: 2964130775281953598}
   - component: {fileID: 2964130775281953599}
   - component: {fileID: 2964130775281953593}
-  - component: {fileID: 2964130775281953594}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5043,6 +5042,8 @@ MonoBehaviour:
   FuelBar: {fileID: 0}
   maximumFuel: 1000
   fuelRegen: 0
+  GameOver: {fileID: 0}
+  PauseMenu: {fileID: 0}
 --- !u!114 &2964130775281953598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5083,18 +5084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3cdc35c4ecb4e42be15823bec53f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2964130775281953594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2964130775281953584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aed6a2aaa286db4aa83714cd7600214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &2964130775357456808
 GameObject:
   m_ObjectHideFlags: 0

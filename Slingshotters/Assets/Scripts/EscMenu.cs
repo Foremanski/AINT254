@@ -9,13 +9,21 @@ public class EscMenu : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject BlurBackground;
     public GameObject Audio;
+    public GameObject GameOver;
 
     // Start is called before the first frame update
     void Start()
     {
+        StartSetup();
+    }
+
+    public void StartSetup()
+    {
         isPaused = false;
         PauseMenu.SetActive(false);
         BlurBackground.SetActive(false);
+        //GameOver.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

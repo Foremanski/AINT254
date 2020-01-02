@@ -10,6 +10,8 @@ public class FuelController : MonoBehaviour
     public float maximumFuel = 1000;
     public float fuelRegen;
 
+    public GameObject GameOver;
+    public GameObject PauseMenu;
 
    // public float burnoutTime = 1;
    // private float timer = Time.deltaTime;
@@ -76,8 +78,6 @@ public class FuelController : MonoBehaviour
         myRigidbody.velocity = new Vector3(0, 0, 0);
         FuelRemaining = maximumFuel;
         FuelBar.value = FuelRemaining;
-
-        
     }
 }
  
