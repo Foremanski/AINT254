@@ -9,7 +9,7 @@ public class onGoalPass : MonoBehaviour
     public string nextLevel;
     public GameObject levelComplete;
     public GameObject Audio;
-    public GameObject BlurBackground;
+    public GameObject BackgroundBlur;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class onGoalPass : MonoBehaviour
         Player.GetComponent<EscMenu>().enabled = false;
         Time.timeScale = 0;
 
-        BlurBackground.SetActive(true);
+        BackgroundBlur.SetActive(true);
 
         //slow down music
         Audio.GetComponent<AudioSource>().pitch = 0.9f;
