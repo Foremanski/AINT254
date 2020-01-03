@@ -79,6 +79,9 @@ public class FuelController : MonoBehaviour
         FuelRemaining = maximumFuel;
         FuelBar.value = FuelRemaining;
         gameObject.GetComponent<GravityController>().enabled = true;
+
+
+
     }
 }
  

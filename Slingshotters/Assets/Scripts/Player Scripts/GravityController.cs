@@ -5,21 +5,25 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     public GameObject Player;
+    public Camera mainCamera;
 
     //planet's gravity field
     public float maxDistance;
     GameObject[] Planet;
 
+
     void Start()
     {
         
-         Planet = GameObject.FindGameObjectsWithTag("Planet");
+        Planet = GameObject.FindGameObjectsWithTag("Planet");
     }
 
     void Update()
     {
         for(int i = 0; i < Planet.Length; i++)
         {
+            
+
             float Distance = Vector3.Distance(Player.transform.position, Planet[i].transform.position);
 
             Rigidbody playerRigidbody = Player.GetComponent<Rigidbody>();
@@ -33,9 +37,33 @@ public class GravityController : MonoBehaviour
             //if the distance between player and planet is under the planet's gravity field
             if (Distance < maxDistance)
             {
+
+                //add fov while in gravity well
+                if(mainCamera.fieldOfView < 90)
+                {
+                    mainCamera.fieldOfView += 0.01f;
+                }
+                
+
+
                 playerRigidbody.AddForce((Planet[i].transform.position - Player.transform.position).normalized * gravityFormula);
             }
+
+
+            
+            //returns FOV to normal out of gravity well
+            if (Distance > maxDistance)
+            {
+                if(mainCamera.fieldOfView >= 56.2f)
+                {
+                    mainCamera.fieldOfView -= 0.1f;
+                }
+                
+            }
+
         }
+
+        
       
         //-------------------------------------------------------------------
         //Old Code Below

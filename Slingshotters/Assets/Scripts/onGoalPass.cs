@@ -9,7 +9,11 @@ public class onGoalPass : MonoBehaviour
     public string nextLevel;
     public GameObject levelComplete;
     public GameObject Audio;
+
     public GameObject BackgroundBlur;
+
+    public GameObject Timer;
+    public GameObject FinalTime;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +33,8 @@ public class onGoalPass : MonoBehaviour
         Time.timeScale = 0;
 
         BackgroundBlur.SetActive(true);
+
+        FinalTime.GetComponent<UnityEngine.UI.Text>().text = Timer.GetComponent<UnityEngine.UI.Text>().text; 
 
         //slow down music
         Audio.GetComponent<AudioSource>().pitch = 0.9f;
