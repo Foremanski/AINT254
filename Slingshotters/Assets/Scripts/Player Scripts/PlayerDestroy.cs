@@ -5,20 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDestroy : MonoBehaviour
 {
-    Vector3 originalPos;
+    public GameObject GameOverUI;
 
     void Start()
     {
-        originalPos = gameObject.transform.position;
+        StartSetup();
+    }
+
+    public void StartSetup()
+    {
+        GameOverUI.SetActive(false);
+        Time.timeScale = 1;
+
+        gameObject.GetComponent<GravityController>().enabled = true;
     }
 
     void OnTriggerEnter(Collider Planet)
     {
-        if(gameObject.tag == "Planet")
+        if(Planet.tag == "Planet")
         {
-            Debug.Log("Oh No!");
-            gameObject.transform.position = originalPos;
-            
-        }
-    }
+            GameOverUI.SetActive(true);
+
+            gameObject.GetComponent<GravityController>().enabled = false;
+
+            Time.timeScale = 0;
+        }                 
+    }   
 }

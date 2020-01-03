@@ -12,6 +12,7 @@ public class GravityController : MonoBehaviour
 
     void Start()
     {
+        
          Planet = GameObject.FindGameObjectsWithTag("Planet");
     }
 
@@ -22,7 +23,7 @@ public class GravityController : MonoBehaviour
             float Distance = Vector3.Distance(Player.transform.position, Planet[i].transform.position);
 
             Rigidbody playerRigidbody = Player.GetComponent<Rigidbody>();
-            Rigidbody planetRigidbody = FindObjectOfType<Rigidbody>(); //Planet.GetComponent<Rigidbody>();
+            Rigidbody planetRigidbody = Planet[i].GetComponent<Rigidbody>();
 
             //gravitional constant
             float G = 6.674f;

@@ -1,0 +1,237 @@
+<Root FileVersion="6.000000" Transpose="0" SaveVersion="40" RestoreUIPage="0" RestoreInstrumentIndex="2">
+   <TrackMap Instr0="15" Instr1="0" Instr2="1" Instr3="2" Instr4="3" Instr5="4" Instr6="5" Instr7="6" Instr8="7" Instr9="8" Instr10="9" Instr11="10" Instr12="11" Instr13="12" Instr14="13" Instr15="14"/>
+   <Instruments>
+      <Instr Type="Mixer" Index="0" MIDIInTranspose="0" InChan="0" InsertFX="0">
+         <MixerChannels>
+            <Channel00 Vol="0.661094" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1 Type="TCE-1">
+                        <Patch Enable="1" RMS="0" Attack="0.000100" Release="0.010000" Threshold="6.952502" Ratio="1.000000" OutputGain="0.000000"/>
+                     </SLOT1>
+                     <RETURNS/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel00>
+         </MixerChannels>
+         <AM>
+            <Send00 Vol="0.800000" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1 Type="E-SPACE">
+                        <Patch Preset="Room 1" Enable="1" DryWet="1.000000"/>
+                     </SLOT1>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Send00>
+            <Send01 Vol="1.000000" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1 Type="CHRONOS">
+                        <Patch Version="2" Type="X-Delay" Enable="1" Sync="1" CRate="0.200000" CDelay="0.100000" CDepth="0.100000" CFeedback="0.500000" DTime="0.250000" DBeatTime="1/2" DFeedback="0.500000" DAmount="1.000000"/>
+                     </SLOT1>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Send01>
+         </AM>
+         <UI Name="Mixer"/>
+      </Instr>
+      <Instr Type="Eden" Index="1" MIDIInTranspose="0" TopPanel="Mod" MLIndex="0" LFOIndex="3" PbyIdx="8" PbyPos="4.414895">
+         <MixerChannels>
+            <Channel00 Vol="0.791983" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel00>
+         </MixerChannels>
+         <AM Mode="Single" SingleI="15" MultiI="0" Modified="false" Compare="false"/>
+         <UI Name="Eden 1"/>
+      </Instr>
+      <Instr Type="Eden" Index="2" MIDIInTranspose="0" TopPanel="Osc" MLIndex="0" LFOIndex="0" PbyIdx="0" PbyPos="0.000000">
+         <MixerChannels>
+            <Channel00 Vol="0.640990" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel00>
+         </MixerChannels>
+         <AM Mode="Single" SingleI="56" MultiI="0" Modified="true" Compare="false" EditPresetData="AwAAAER1YnN0ZXAgQmFzcwAAAAAAAAAAAAAAAAEAAAACAAAARNyUPgIAAABxPQo+CtejPQAA
+AAABAAAAAQAAAA8AAAAAAEDBAAAAAAEAAAAGAAAAAADAwQAAAAAAAAAAzcyMPRSuBz8CAAAA
+AAAAAAAAAAAAAAA/AQAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAA
+AAAAAAAAFK7HPo/C9TzNzEw/AAAAAAAAAAABAAAAAwAAAOF6lD5wPeo+61FIP4/CdT4AAIA/
+AAAAAAIAAAAAAAAAuB6NQAAAAADD9Sg+7FG4PwAAAAACAAAAAgAAALgejUABAAAAAACAPwAA
+AAACAAAAAgAAAAMAAAC4Ho1AAAAAAAAAgD8AAAAAAgAAAAIAAAABAAAAuB6NQAYAAAAAAAAA
+AAAAAAIAAAABAAAAAAAAAAAAAAAAAAA/AABAPwAAQD8K16M7AAAAAAEAAAABAAAAAQAAAAQA
+AAACAAAAAQAAAAIAAAAAAAAAZAAAAAEAAAAFAAAABAAAAJz///8BAAAABwAAAAAAAABkAAAA
+AQAAAAEAAAAEAAAAZAAAAAEAAAADAAAABAAAAAAAAAABAAAAAgAAAAAAAABkAAAAAQAAAAIA
+AAABAAAAZAAAAAEAAAAAAAAAAAAAAGQAAAABAAAAAAAAAAAAAABkAAAAAQAAAA8AAAAAAAAA
+ZAAAAAEAAAABAAAAAgAAAAAAgD8AAAAAAACAPwIAAAAAAAAAAQAAAAEAAADn4RQ+AACAPrrb
+dTwpXM8+AACAPgAAAAAAAAAApHA9PgEAAAAAAAAAAAAAAAAAAAAAAAAAfRROPwAAAADu7u7u
+PEVNUFRZPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8BAAAAAAAAAAAAAAB/AAAADAAAADMz
+sz4BAAAAAAAAAAAAAAB/AAAA/////wAAQD8BAAAA6P///wAAAAB/AAAA/////wAAQD8BAAAA
+AAAAAAAAAAB/AAAAAQAAAAEAAAABAAAAAACAPwAAAD8AAEA/AgAAAAAAAAABAAAAAAAAAKlK
+uz0AAIA+yorhPAAAAAAAAIA+AwAAAAAAAD8AAIA+AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+uB6FPWZmZj4BAAAAAAAAAA==
+"/>
+         <UI Name="Eden 2"/>
+      </Instr>
+      <Instr Type="Eden" Index="3" MIDIInTranspose="0" TopPanel="Mod" MLIndex="0" LFOIndex="3" PbyIdx="0" PbyPos="0.000000">
+         <MixerChannels>
+            <Channel00 Vol="0.716689" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel00>
+         </MixerChannels>
+         <AM Mode="Single" SingleI="258" MultiI="0" Modified="false" Compare="false"/>
+         <UI Name="Eden 3"/>
+      </Instr>
+      <Instr Type="Eden" Index="4" MIDIInTranspose="0" TopPanel="0" MLIndex="0" LFOIndex="2" PbyIdx="0" PbyPos="0.000000">
+         <MixerChannels>
+            <Channel00 Vol="0.858992" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel00>
+         </MixerChannels>
+         <AM Mode="Single" SingleI="1793" MultiI="0" Modified="false" Compare="false"/>
+         <UI Name="Eden 4"/>
+      </Instr>
+      <Instr Type="TRG" Index="5" MIDIInTranspose="0" MainPage="0">
+         <MixerChannels>
+            <Channel00 Vol="0.777758" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel00>
+            <Channel01 Vol="0.777758" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel01>
+            <Channel02 Vol="0.777758" Pan="0.500000" Mute="0">
+               <InsertFX>
+                  <Nodes>
+                     <IN/>
+                     <SLOT1/>
+                     <SLOT2/>
+                     <SLOT3/>
+                     <SLOT4/>
+                     <OUT/>
+                  </Nodes>
+               </InsertFX>
+            </Channel02>
+         </MixerChannels>
+         <AM Mute="0">
+            <Pad0 Nam="/User/Projects/Demos/MenuTheme.prj/BD.wav" Vol="1.000000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="16383" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad0>
+            <Pad1 Nam="/User/Projects/Demos/MenuTheme.prj/Snare.wav" Vol="0.510000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="27411" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad1>
+            <Pad2 Nam="/User/Projects/Demos/MenuTheme.prj/HH-CL.wav" Vol="0.555000" Pan="0.490000" Tps="0" Pit="0" Bus="0" Grp="1" Sta="0" End="17696" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad2>
+            <Pad3 Nam="/User/Projects/Demos/MenuTheme.prj/HH-OP.wav" Vol="0.500000" Pan="0.410000" Tps="0" Pit="0" Bus="0" Grp="1" Sta="0" End="43775" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad3>
+            <Pad4 Nam="/User/Projects/Demos/MenuTheme.prj/TomHi.wav" Vol="0.515000" Pan="0.350000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="45695" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad4>
+            <Pad5 Nam="/User/Projects/Demos/MenuTheme.prj/TomMid.wav" Vol="0.500000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="86015" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad5>
+            <Pad6 Nam="/User/Projects/Demos/MenuTheme.prj/TomLo.wav" Vol="0.500000" Pan="0.630000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="41087" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad6>
+            <Pad7 Nam="/User/Projects/Demos/MenuTheme.prj/Rim.wav" Vol="0.380000" Pan="0.395000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="18335" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad7>
+            <Pad8 Nam="/User/Projects/Demos/MenuTheme.prj/Ride1.wav" Vol="0.320000" Pan="0.315000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="120575" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad8>
+            <Pad9 Nam="/User/Projects/Demos/MenuTheme.prj/Ride2.wav" Vol="0.380000" Pan="0.675000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="128767" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad9>
+            <Pad10 Nam="/User/Projects/Demos/MenuTheme.prj/Crash1.wav" Vol="0.455000" Pan="0.330000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="134399" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad10>
+            <Pad11 Nam="/User/Projects/Demos/MenuTheme.prj/Crash2.wav" Vol="0.380000" Pan="0.675000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="162431" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad11>
+            <Pad12 Nam="/User/Projects/Demos/MenuTheme.prj/Sticks.wav" Vol="0.710000" Pan="0.500000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="11807" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad12>
+            <Pad13 Nam="/User/Projects/Demos/MenuTheme.prj/Perc1.wav" Vol="0.500000" Pan="0.345000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="12991" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad13>
+            <Pad14 Nam="" Vol="0.500000" Pan="0.500000" Tps="0" Pit="0" Bus="0" Grp="0" Sta="0" End="0" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad14>
+            <Pad15 Nam="/User/Projects/Demos/MenuTheme.prj/KP jizz breaks 4.wav" Vol="1.000000" Pan="0.500000" Tps="0" Pit="0" Bus="1" Grp="0" Sta="0" End="169343" Dir="Forward" Trg="Trigger">
+               <AmpEnv Version="1" Flags="3" A="0.000000" D="0.000000" S="1.000000" R="0.000000" Amount="1.000000" Invert="0"/>
+            </Pad15>
+            <Out0 Rev="0.000000" Del="0.000000" Enable="0" Type="LP" Cutoff="0.000000" Q="0.000000"/>
+            <Out1 Rev="0.000000" Del="0.000000" Enable="0" Type="LP" Cutoff="0.565000" Q="0.470000"/>
+            <Out2 Rev="0.000000" Del="0.000000" Enable="0" Type="LP" Cutoff="0.000000" Q="0.000000"/>
+         </AM>
+         <UI Name="Pads"/>
+      </Instr>
+   </Instruments>
+</Root>

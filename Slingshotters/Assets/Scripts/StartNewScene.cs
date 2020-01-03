@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartNewScene : MonoBehaviour
 {
+
+    public string sceneName;
+
     public void StartGame()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(sceneName);
     }
 
     public void ExitGame()
@@ -17,10 +20,6 @@ public class StartNewScene : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("GameMenu");
-        }
     }
 
 }
