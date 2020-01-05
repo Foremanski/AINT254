@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 1110796747}
   - component: {fileID: 1110796749}
   m_Layer: 0
-  m_Name: NewScene
+  m_Name: SceneAndMenuHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
