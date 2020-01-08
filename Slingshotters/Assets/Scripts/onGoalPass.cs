@@ -8,7 +8,9 @@ public class onGoalPass : MonoBehaviour
     public GameObject Player;
     public string nextLevel;
     public GameObject levelComplete;
-    public GameObject Audio;
+
+    public AudioSource MusicAudio;
+    public AudioSource GoalReached;
 
     public GameObject BackgroundBlur;
 
@@ -34,11 +36,13 @@ public class onGoalPass : MonoBehaviour
 
         BackgroundBlur.SetActive(true);
 
-        FinalTime.GetComponent<UnityEngine.UI.Text>().text = Timer.GetComponent<UnityEngine.UI.Text>().text; 
+        FinalTime.GetComponent<UnityEngine.UI.Text>().text = Timer.GetComponent<UnityEngine.UI.Text>().text;
+
+        GoalReached.Play();
 
         //slow down music
-        Audio.GetComponent<AudioSource>().pitch = 0.9f;
-        Audio.GetComponent<AudioSource>().volume = 0.5f;
+        MusicAudio.pitch = 0.9f;
+        MusicAudio.volume = 0.5f;
 
         //enable finish UI
         levelComplete.SetActive(true);        

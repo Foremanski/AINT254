@@ -7,7 +7,7 @@ public class PlayerDestroy : MonoBehaviour
 {
     public GameObject GameOverUI;
     public GameObject BackgroundBlur;
-    
+    public AudioSource ShipExplode;
 
     void Start()
     {
@@ -29,7 +29,8 @@ public class PlayerDestroy : MonoBehaviour
         if(Planet.tag == "Planet")
         {
             GameOverUI.SetActive(true);
-            BackgroundBlur.SetActive(true);        
+            BackgroundBlur.SetActive(true);
+            ShipExplode.Play();
 
             gameObject.GetComponent<GravityController>().enabled = false;
             gameObject.GetComponent<EscMenu>().enabled = false;

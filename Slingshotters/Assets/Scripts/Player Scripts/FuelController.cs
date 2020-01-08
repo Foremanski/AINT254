@@ -9,6 +9,7 @@ public class FuelController : MonoBehaviour
     private float FuelRemaining;
     public float maximumFuel = 500;
     public float fuelRegen;
+    public bool FuelOut;
 
     public GameObject GameOver;
     public GameObject PauseMenu;
@@ -27,7 +28,8 @@ public class FuelController : MonoBehaviour
     public void Start()
     {          
         FuelRemaining = maximumFuel;
-        
+        FuelOut = false;
+
         //===========================
         originalPos = gameObject.transform.position;
         myRigidbody = gameObject.GetComponent<Rigidbody>();
@@ -43,7 +45,7 @@ public class FuelController : MonoBehaviour
         if(FuelRemaining == 0)
         {
             gameObject.GetComponent<PlayerMovement>().enabled = false;
-
+            FuelOut = true;
             //for(timer = 0; timer <= burnoutTime; timer++)
            // {
            //     FuelRemaining = 0;
