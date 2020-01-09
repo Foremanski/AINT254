@@ -13152,7 +13152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1459927748}
-  nextLevel: Level2
+  nextLevel: Level3
   levelComplete: {fileID: 2068156270}
   MusicAudio: {fileID: 1540661661}
   GoalReached: {fileID: 817226050}
