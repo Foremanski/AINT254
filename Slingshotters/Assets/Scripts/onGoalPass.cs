@@ -28,7 +28,7 @@ public class onGoalPass : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider Player)
+    private void OnTriggerEnter(Collider other)
     {
         //prevent player from accessing escape menu
         Player.GetComponent<EscMenu>().enabled = false;
