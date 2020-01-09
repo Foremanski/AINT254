@@ -10,7 +10,8 @@ public class GravityController : MonoBehaviour
     //planet's gravity field
     public float maxDistance;
     GameObject[] Planet;
-    public AudioSource planetAttractor;
+    //public AudioSource planetAttractor;
+    public bool gravityAffecting;
 
 
     void Start()
@@ -45,30 +46,25 @@ public class GravityController : MonoBehaviour
                     mainCamera.fieldOfView += 0.01f;
                 }
 
-                //if gravity attractor sound isn't playing already
-                if( planetAttractor.isPlaying == false)
-                {
-                    planetAttractor.Play();
-                }
                 
 
+                gravityAffecting = true;
 
                 playerRigidbody.AddForce((Planet[i].transform.position - Player.transform.position).normalized * gravityFormula);
             }
-            
 
-            
+
+
             //returns FOV to normal out of gravity well
             if (Distance > maxDistance)
             {
-                if(mainCamera.fieldOfView >= 56.2f)
+                if (mainCamera.fieldOfView >= 56.2f)
                 {
                     mainCamera.fieldOfView -= 0.1f;
                 }
                 //stop sound
-                planetAttractor.Stop();
+                gravityAffecting = false;
             }
-
         }
 
         

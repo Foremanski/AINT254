@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class playAudioOnForward : MonoBehaviour
 {
+    public AudioSource planetAttractor;
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -20,5 +22,18 @@ public class playAudioOnForward : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().Stop();
         }
+
+
+        //if played is being pulled in and gravity attractor sound isn't playing already
+        if (gameObject.GetComponent<GravityController>().gravityAffecting == true && planetAttractor.isPlaying == false)
+        {
+            planetAttractor.Play();
+        }
+
+        if(gameObject.GetComponent<GravityController>().gravityAffecting == false)
+        {
+            planetAttractor.Stop();
+        }
+
     }
 }
