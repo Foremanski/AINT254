@@ -5,70 +5,59 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     public GameObject Player;
-    public Camera mainCamera;
 
     //planet's gravity field
     public float maxDistance;
     GameObject[] Planet;
     //public AudioSource planetAttractor;
     public bool gravityAffecting;
-
+    private Rigidbody playerRigidbody;
 
     void Start()
     {
-        
+        playerRigidbody = Player.GetComponent<Rigidbody>();
         Planet = GameObject.FindGameObjectsWithTag("Planet");
     }
 
     void Update()
     {
         for(int i = 0; i < Planet.Length; i++)
-        {
-            
-
+        {          
             float Distance = Vector3.Distance(Player.transform.position, Planet[i].transform.position);
-
-            Rigidbody playerRigidbody = Player.GetComponent<Rigidbody>();
             Rigidbody planetRigidbody = Planet[i].GetComponent<Rigidbody>();
 
             //gravitional constant
             float G = 6.674f;
-            //newtons gravitional formula 
+            //formula 
             float gravityFormula = (G * ((playerRigidbody.mass * planetRigidbody.mass) / (Distance * Distance)));
 
-            //if the distance between player and planet is under the planet's gravity field
+            //if player is close enough
             if (Distance < maxDistance)
             {
-
                 //add fov while in gravity well
-                if(mainCamera.fieldOfView < 90)
+                if(Camera.main.fieldOfView < 90)
                 {
-                    mainCamera.fieldOfView += 0.01f;
-                }
-
-                
-
+                    Camera.main.fieldOfView += 0.01f;
+                }              
                 gravityAffecting = true;
 
+                //add force to player in direction of planet
                 playerRigidbody.AddForce((Planet[i].transform.position - Player.transform.position).normalized * gravityFormula);
             }
 
-
-
             //returns FOV to normal out of gravity well
-            if (Distance > maxDistance)
+            else
             {
-                if (mainCamera.fieldOfView >= 56.2f)
+                if (Camera.main.fieldOfView >= 56.2f)
                 {
-                    mainCamera.fieldOfView -= 0.1f;
+                    Camera.main.fieldOfView -= 0.1f;
                 }
                 //stop sound
                 gravityAffecting = false;
             }
         }
 
-        
-      
+               
         //-------------------------------------------------------------------
         //Old Code Below
         //--------------------------------------------------------------------

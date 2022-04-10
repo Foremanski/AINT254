@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         else if (Input.GetKey("w"))
         {
-            myRigidbody.AddRelativeForce(new Vector3(1, 0, 0) * moveSpeed);
+            myRigidbody.AddRelativeForce(new Vector3(0, 0, 1) * moveSpeed);
 
         }
     }
