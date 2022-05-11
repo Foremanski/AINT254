@@ -20,12 +20,15 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey("a"))
         {
-            myRigidbody.AddTorque(new Vector3(0, -1, 0) * rotSpeed);           
+            myRigidbody.AddTorque(new Vector3(0, -1, 0) * rotSpeed);
+            gameObject.GetComponent<PlayPlayerEffect>().TurnLeftEffect();
         }
      
         else if (Input.GetKey("d"))
         {
             myRigidbody.AddTorque(new Vector3(0, 1, 0) * rotSpeed);
+
+            gameObject.GetComponent<PlayPlayerEffect>().TurnRightEffect();
 
         }
 
@@ -33,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
         {
             myRigidbody.AddRelativeForce(new Vector3(0, 0, 1) * moveSpeed);
 
+            gameObject.GetComponent<PlayPlayerEffect>().GoForwardEffect();
+
         }
+        else
+        {
+            gameObject.GetComponent<PlayPlayerEffect>().StopEffect();
+        }
+
     }
 }

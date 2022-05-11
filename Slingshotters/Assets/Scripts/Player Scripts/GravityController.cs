@@ -5,93 +5,84 @@ using UnityEngine;
 public class GravityController : MonoBehaviour
 {
     public GameObject Player;
-
-    //planet's gravity field
-    public float maxDistance;
-    GameObject[] Planet;
-    //public AudioSource planetAttractor;
-    public bool gravityAffecting;
     private Rigidbody playerRigidbody;
+    
+    GameObject[] Planet;    
+    private Rigidbody currentPlanetRigidbody;
+
+    //gravitational constant
+    private float G;
+    //distance between player and planet
+    private float currentDistance;   
+    //gravity effect currently being applied
+    private float currentGravityEffect;
 
     void Start()
     {
+        //get player rigidbody
         playerRigidbody = Player.GetComponent<Rigidbody>();
+        //get all Planets
         Planet = GameObject.FindGameObjectsWithTag("Planet");
+        //set constant
+        G = 6.674f;
     }
 
     void Update()
     {
-        for(int i = 0; i < Planet.Length; i++)
-        {          
-            float Distance = Vector3.Distance(Player.transform.position, Planet[i].transform.position);
-            Rigidbody planetRigidbody = Planet[i].GetComponent<Rigidbody>();
+        UpdatePlayerGravity();
+    }
 
-            //gravitional constant
-            float G = 6.674f;
-            //formula 
-            float gravityFormula = (G * ((playerRigidbody.mass * planetRigidbody.mass) / (Distance * Distance)));
+    void UpdatePlayerGravity()
+    {
+        for (int i = 0; i < Planet.Length; i++)
+        {
+            GetPlanetData(Planet[i]);
+            AddPlanetForce(Planet[i]);
+        }
+        //CheckAudioState();
+    }
 
-            //if player is close enough
-            if (Distance < maxDistance)
+    void GetPlanetData(GameObject currentPlanet)
+    {
+        currentDistance = Vector3.Distance(Player.transform.position, currentPlanet.transform.position);
+        currentPlanetRigidbody = currentPlanet.GetComponent<Rigidbody>();
+
+        //formula 
+        currentGravityEffect = (G * ((playerRigidbody.mass * currentPlanetRigidbody.mass) / (currentDistance * currentDistance)));
+    }
+
+    void AddPlanetForce(GameObject currentPlanet)
+    {
+        //if player is within planet's range
+        if (currentDistance < currentPlanet.GetComponent<PlanetInformation>().getPlanetDistance())
+        {
+            //add fov while in gravity well
+            if (Camera.main.fieldOfView < 90)
             {
-                //add fov while in gravity well
-                if(Camera.main.fieldOfView < 90)
-                {
-                    Camera.main.fieldOfView += 0.01f;
-                }              
-                gravityAffecting = true;
-
-                //add force to player in direction of planet
-                playerRigidbody.AddForce((Planet[i].transform.position - Player.transform.position).normalized * gravityFormula);
+                Camera.main.fieldOfView += 0.01f;
             }
-
-            //returns FOV to normal out of gravity well
-            else
+            //play audio
+            if(!currentPlanet.GetComponent<AudioSource>().isPlaying)
             {
-                if (Camera.main.fieldOfView >= 56.2f)
-                {
-                    Camera.main.fieldOfView -= 0.1f;
-                }
-                //stop sound
-                gravityAffecting = false;
+                currentPlanet.GetComponent<AudioSource>().Play();
             }
+            //add force to player in direction of planet
+            playerRigidbody.AddForce((currentPlanet.transform.position - Player.transform.position).normalized * currentGravityEffect);
         }
 
-               
-        //-------------------------------------------------------------------
-        //Old Code Below
-        //--------------------------------------------------------------------
-        /*
-        //creates an array of rigidbodies to apply gravity to
-        Rigidbody[] Rigidbodies = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
-
-            for (int x = 0; x < Rigidbodies.Length; x++)
+        //returns FOV to normal out of gravity well
+        else
+        {
+            if (Camera.main.fieldOfView >= 56.2f)
             {
-                for (int y = 0; y < Rigidbodies.Length; y++)
-                {
-                    if (x != y)
-                    {
-                        Rigidbodies[x].AddForce((Rigidbodies[y].gameObject.transform.position
-                        - Rigidbodies[x].transform.position)
-                        * (Rigidbodies[y].mass
-                        / Vector3.Distance(Rigidbodies[x].transform.position, Rigidbodies[y].transform.position)));
-
-                        if (Rigidbodies[x].velocity.magnitude > 100)
-                        {
-                            
-                        }
-
-                        // if(Rigidbodies[x])
-                        //  {
-                        //     Rigidbodies[x].AddForce(Rigidbodies[x].velocity * 3);
-                        //     Rigidbodies[y].AddForce(Rigidbodies[y].velocity * 3);
-                        // }
-
-                    }
-
-                    //checks to see if the rigidbody is close to the planet 
-
-                }
-            }  */    
+                Camera.main.fieldOfView -= 0.1f;
+            }
+            //play audio
+            if (currentPlanet.GetComponent<AudioSource>().isPlaying)
+            {
+                currentPlanet.GetComponent<AudioSource>().Stop();
+            }
+        }
     }
+
 }
